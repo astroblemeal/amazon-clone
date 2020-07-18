@@ -27,9 +27,7 @@ function Product({ id, title, image, price, rating}) {
 
 
     <button>Add to Basket</button>
-    <div className="love">
-    <p>❤️️</p>
-    </div>
+
 
 
 
