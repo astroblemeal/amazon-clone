@@ -6,7 +6,7 @@
   justify-content: flex-end;
   max-height: 400px;
   min-width: 100px;
-  margin: 2px;
+  margin: 10px;
   margin-bottom: 10px;
   background-color: white;
   padding: 20px;
@@ -40,7 +40,10 @@ margin-bottom: 15px;
   background-color: #f0c14b;
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
+
 }
+
+
 
 .love {
 padding: 5px;

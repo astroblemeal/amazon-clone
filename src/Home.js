@@ -9,67 +9,62 @@ function Home() {
     <div className="home">
       <img
         className="home__image"
-        src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png"
+        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_v2_1x._CB432458380_.jpg"
        alt=""
      />
 
       <div className="home__row">
-
         <Product
-          id="23232323"
-          title="The Lean Startup"
-          price={11.65}
+          id="1"
+          title="PRS-Silver Sky"
+          price={1999.65}
           rating={5}
-          image="https://source.unsplash.com/random"
+          image="https://www.reidys.com/images/prs-silver-sky-maple-fingerboard-tungsten-p6992-8858_zoom.jpg"
       />
         <Product
-        id="23232324"
+        id="2"
           title="The Lean Startup"
-          price={11.65}
+          price={15541.65}
           rating={5}
           image="https://source.unsplash.com/random"
         />
-
         </div>
 
 
         <div className="home__row">
-
         <Product
-          id="23232323"
-          title="The Lean Startup"
-          price={11.65}
-          rating={5}
+          id="3"
+          title="Cool product 112"
+          price={1431.35}
+          rating={3}
           image="https://source.unsplash.com/random"
       />
         <Product
-        id="23232324"
-          title="The Lean Startup"
-          price={11.65}
-          rating={5}
+        id="4"
+          title="good stuff"
+          price={11.15}
+          rating={2}
           image="https://source.unsplash.com/random"
         />
         <Product
-        id="23232324"
-          title="The Lean Startup"
-          price={11.65}
+        id="5"
+          title="it's wat u need"
+          price={1331.65}
           rating={5}
           image="https://source.unsplash.com/random"
         />
-
         </div>
 
 
 
         <div className="home__row">
         <Product
-        id="23232324"
-          title="The Lean Startup"
-          price={11.65}
+        id="6"
+          title="no lalala"
+          price={1231.65}
           rating={5}
           image="https://source.unsplash.com/random"
         />
-
         </div>
 
 
