@@ -40,17 +40,4 @@ margin-bottom: 15px;
   background-color: #f0c14b;
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
-
-}
-
-
-
-.love {
-padding: 5px;
-display: flex;
-margin-top: 5px;
-}
-
-.love:hover {
-opacity: 0.5;
 }

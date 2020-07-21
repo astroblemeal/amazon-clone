@@ -1,5 +1,11 @@
 export const initialState = {
-  basket: [],
+  basket: [{
+    id: "155",
+          title: "PRS-Silver Sky 2",
+          price: 199.65,
+          rating: 3,
+          image: "https://www.reidys.com/images/prs-silver-sky-maple-fingerboard-tungsten-p6992-8858_zoom.jpg",
+  }],
   user: null,
 };
 
@@ -13,7 +19,17 @@ console.log(action);
       basket: [...state.basket, action.item]
     };
       case 'REMOVE_FROM_BASKET':
-      return {state};
+        let newBasket = [...state.basket];
+          const index  = state.basket.findIndex((basketItem) => basketItem.id === action.id);
+            if (index >= 0) {
+              newBasket.splice(index, 1);
+
+
+
+              } else {
+                console.log(action)
+            }
+      return { ...state, basket: newBasket };
     default:
         return state;
   }
