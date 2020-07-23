@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import Login from './Login';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,17 +18,22 @@ function App() {
       <div className="app">
         <Switch>
           <Route path="/checkout">
+
           <Header />
+
             <Checkout />
 
           </Route>
             <Router path="/login">
-              <h1>Login page</h1>
+
+              <Login />
 
             </Router>
               <Route path="/">
+
               <Header />
                 <Home />
+
               </Route>
           </Switch>
         </div>
