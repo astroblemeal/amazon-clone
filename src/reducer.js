@@ -1,11 +1,5 @@
 export const initialState = {
-  basket: [{
-    id: "155",
-          title: "PRS-Silver Sky 2",
-          price: 199.65,
-          rating: 3,
-          image: "https://www.reidys.com/images/prs-silver-sky-maple-fingerboard-tungsten-p6992-8858_zoom.jpg",
-  }],
+  basket: null,
   user: null,
 };
 
@@ -16,6 +10,12 @@ basket?.reduce((amount, item) => item.price + amount, 0);
 const reducer = (state, action) => {
 console.log(action);
   switch(action.type) {
+    case "SET_USER":
+    return {
+      ...state,
+      user: action.user,
+    };
+
     case 'ADD_TO_BASKET':
     return {
       ...state,
