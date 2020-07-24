@@ -1,19 +1,17 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link, } from "react-router-dom";
-import Header from './Header';
-import Home from './Home';
-import Checkout from './Checkout';
+import Header from "./Header";
+import Home from "./Home";
+import Checkout from "./Checkout";
 import Login from './Login';
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
+
 function App() {
   const [{ user }, dispatch] = useStateValue();
     //code which runs based on a condition
-
-
-
     useEffect(() => {
 
      const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -22,24 +20,25 @@ function App() {
         dispatch({
           type: "SET_USER",
           user: authUser,
-        })
+        });
+
       } else {
 
         dispatch({
           type: "SET_USER",
           user: null,
-        })
+        });
         }
-      })
+      });
 
      return () => {
       // any cleanups go in here
       unsubscribe();
      }
 
-    }, [dispatch]);
+    }, []);
 
-console.log("THE USER IS >>>",user);
+console.log('THE USER IS >>>', user);
 
 
 // routes

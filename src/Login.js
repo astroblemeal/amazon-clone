@@ -2,39 +2,34 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, useHistory } from "react-router-dom";
-
 import { auth } from "./firebase";
 
 function Login() {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const login = event => {
+  const login = (event) => {
     event.preventDefault();
 
-    auth.signInWithEmailAndPassword(email,password)
+    auth
+    .signInWithEmailAndPassword(email,password)
     .then((auth) => {
-      //login and redirect
-      history.push('/');
-
-
+      history.push("/");
       })
     .catch((e) => alert(e.message));
-
   };
 
-  const register = event => {
+  const register = (event) => {
     event.preventDefault();
+
 
     auth
     .createUserWithEmailAndPassword(email,password)
     .then((auth) => {
-      //created a user
-
+      history.push("/");
       })
     .catch((e) => alert(e.message));
-
   };
 
   return (
@@ -46,7 +41,6 @@ function Login() {
           alt=""
           />
       </Link>
-
       <div className="login__container">
         <h1> Sign in</h1>
         <form>
@@ -55,17 +49,17 @@ function Login() {
           <h5>Password</h5>
           <input value={password} onChange={event => setPassword(event.target.value)} type="password"/>
           <button onClick={login} type="submit" className="login__signInButton">Sign In</button>
-        <p><small>
-         The price and availability of items at Amazon.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price.</small>
-      </p>
-      <button onClick={register} className="login__registerInButton">Create an Amazon account</button>
+          <p>
+          <small>
+          The price and availability of items at Amazon.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price.
+          </small>
+          </p>
+          <button onClick={register} className="login__registerButton">Create an Amazon account
+          </button>
         </form>
       </div>
-
-
     </div>
-
-    );
+  );
 }
 
 export default Login;
