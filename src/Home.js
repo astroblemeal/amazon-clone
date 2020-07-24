@@ -17,41 +17,42 @@ function Home() {
         <Product
           id="1"
           title="PRS-Silver Sky"
-          price={1999.65}
+          price={1999.99}
           rating={5}
+
           image="https://www.reidys.com/images/prs-silver-sky-maple-fingerboard-tungsten-p6992-8858_zoom.jpg"
       />
         <Product
         id="2"
-          title="The Lean Startup"
-          price={15541.65}
-          rating={5}
-          image="https://source.unsplash.com/random"
+          title="iPhone SE"
+          price={459.99}
+          rating={3}
+          image="https://images.iphonemod.net/wp-content/uploads/2018/04/iPhone8-iPhone8PLUS-PRODUCT-RED_angled-back_041018.jpg"
+
         />
         </div>
-
 
         <div className="home__row">
         <Product
           id="3"
-          title="Cool product 112"
-          price={1431.35}
+          title="Furby"
+          price={20}
           rating={3}
-          image="https://source.unsplash.com/random"
+          image="https://images-na.ssl-images-amazon.com/images/I/515Hv4-U-gL._AC_.jpg"
       />
         <Product
         id="4"
-          title="good stuff"
-          price={11.15}
+          title="Tamagotchi"
+          price={11.99}
           rating={2}
-          image="https://source.unsplash.com/random"
+          image="https://static.tvtropes.org/pmwiki/pub/images/tamagotchi.jpg"
         />
         <Product
         id="5"
-          title="it's wat u need"
-          price={1331.65}
-          rating={5}
-          image="https://source.unsplash.com/random"
+          title="Sony MiniDisc Walkman"
+          price={199.99}
+          rating={4}
+          image="https://images-na.ssl-images-amazon.com/images/I/413NTVNS76L._AC_.jpg"
         />
         </div>
 
@@ -60,10 +61,10 @@ function Home() {
         <div className="home__row">
         <Product
         id="6"
-          title="no lalala"
-          price={1231.65}
+          title="Big monitor"
+          price={599.99}
           rating={5}
-          image="https://source.unsplash.com/random"
+          image="https://images-na.ssl-images-amazon.com/images/I/711GPszf6UL._AC_SL1500_.jpg"
         />
         </div>
 
