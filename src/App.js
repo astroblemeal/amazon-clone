@@ -1,36 +1,45 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import Login from './Login';
 import { BrowserRouter as Router, Switch, Route, Link, } from "react-router-dom";
 import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout';
+import Login from './Login';
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
 function App() {
-  const [{ basket, dispatch }] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
     //code which runs based on a condition
 
 
 
     useEffect(() => {
 
-      auth.onAuthStateChanged((authUser) => {
+     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
+
         dispatch({
           type: "SET_USER",
-          user: authUser
+          user: authUser,
         })
       } else {
 
         dispatch({
           type: "SET_USER",
-          user: null
+          user: null,
         })
         }
       })
-    }, []);
+
+     return () => {
+      // any cleanups go in here
+      unsubscribe();
+     }
+
+    }, [dispatch]);
+
+console.log("THE USER IS >>>",user);
 
 
 // routes

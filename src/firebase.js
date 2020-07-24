@@ -11,7 +11,7 @@ const firebaseApp = firebase.initializeApp ({
   });
 
 
-  const auth = firebase.auth();
+  const auth = firebaseApp.auth();
 
-  export { auth};
+  export { auth };
 
